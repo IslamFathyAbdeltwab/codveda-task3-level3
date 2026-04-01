@@ -1,186 +1,101 @@
-# companyCodveda - Cloud Integration with Azure (.NET Project)
+# 🚀 Codveda .NET Development Internship
 
-## 📌 Project Overview
+This repository contains all the projects I completed during my **.NET Development Internship at Codveda Technology**.
 
-This project demonstrates how to **deploy and manage .NET applications on Microsoft Azure** using modern cloud practices. It covers web hosting, file storage, serverless computing, and CI/CD automation.
-
-The goal is to build a scalable and secure cloud-based application using Azure services.
+Throughout this internship, I gained hands-on experience in **C#, ASP.NET Core, and modern software development practices**, building multiple projects across different levels.
 
 ---
 
-## 🚀 Features
+# 📌 Internship Overview
 
-* 🌐 Deploy ASP.NET Core Web App using Azure App Services
-* 📦 Store and manage files using Azure Blob Storage
-* ⚡ Implement serverless logic using Azure Functions
-* 🔄 Automate deployment with CI/CD using Azure DevOps
+The internship is divided into **3 levels**:
 
----
+- Level 1 – Basic (C# & Core Concepts)
+- Level 2 – Intermediate (Application Development)
+- Level 3 – Advanced (Performance & Cloud)
 
-## 🏗️ Technologies Used
-
-* ASP.NET Core Web API / MVC
-* Microsoft Azure App Services
-* Azure Blob Storage
-* Azure Functions
-* Azure DevOps (CI/CD Pipelines)
-* Git & GitHub
+Each level includes practical projects demonstrating real-world development skills.
 
 ---
 
-## 📂 Project Structure
+# 🧠 Level 1 – Basic
 
-```
-/CloudProject
-│── /WebApp                # ASP.NET Core Application
-│── /AzureFunctions       # Serverless Functions
-│── /Services             # Blob Storage Service Logic
-│── /Models               # Data Models
-│── /Controllers          # API Controllers
-│── appsettings.json      # Configuration
-│── README.md
-```
+## 🔹 1. C# Basics & Object-Oriented Programming (OOP)
 
----
+### 📌 Project: Student Management System (Console App)
 
-## ⚙️ Setup & Installation
+This project demonstrates the core fundamentals of **C# programming** and **Object-Oriented Programming (OOP)**.
 
-### 1️⃣ Clone Repository
+### ✅ Concepts Covered
 
-```bash
-git clone https://github.com/your-username/companyCodveda.git
-cd companyCodveda
-```
+- C# syntax, variables, and data types  
+- Classes and objects  
+- Constructors and methods  
+- Access modifiers  
+- Encapsulation  
+- Inheritance  
+- Polymorphism  
 
-### 2️⃣ Configure App Settings
+### ⚙️ Features
 
-Update `appsettings.json`:
-
-```json
-"AzureStorage": {
-  "ConnectionString": "your_blob_storage_connection"
-}
-```
+- Add students  
+- View students  
+- Console-based interaction  
 
 ---
 
-## ☁️ Azure Deployment Steps
+## 🔹 2. Exception Handling & Debugging
 
-### 🔹 1. Deploy to Azure App Services
+### 📌 Project: Exception Handling Web API
 
-1. Create App Service in Azure Portal
-2. Publish project from Visual Studio or CLI:
+This project demonstrates how to handle errors and debug applications in **ASP.NET Core Web API**.
 
-```bash
-dotnet publish -c Release
-```
+### ✅ Concepts Covered
 
-3. Deploy using:
+- try-catch-finally blocks  
+- Custom exceptions  
+- Error handling in APIs  
+- Debugging using Visual Studio  
+- Logging using Serilog  
 
-```bash
-az webapp deploy
-```
+### ⚙️ Features
 
----
-
-### 🔹 2. Azure Blob Storage Integration
-
-* Create Storage Account
-* Create Blob Container
-* Use SDK to upload/download files
-
-Example:
-
-```csharp
-BlobContainerClient container = new BlobContainerClient(connectionString, "files");
-await container.UploadBlobAsync(fileName, stream);
-```
+- Get product by ID  
+- Handle missing data with custom exceptions  
+- Log errors and requests  
 
 ---
 
-### 🔹 3. Azure Functions (Serverless)
+# 🌐 Level 2 – Intermediate
 
-* Create Function App
-* Add HTTP Trigger Function
+## 🔹 1. Console Application
 
-Example:
+### 📌 Project: Console Management System
 
-```csharp
-[FunctionName("HelloFunction")]
-public IActionResult Run(
-    [HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
-{
-    return new OkObjectResult("Hello from Azure Function");
-}
-```
+A simple console-based application to manage data and practice logic building.
 
----
+### ✅ Concepts Covered
 
-### 🔹 4. CI/CD with Azure DevOps
-
-1. Create a new Pipeline
-2. Connect GitHub repository
-3. Use YAML pipeline:
-
-```yaml
-trigger:
-- main
-
-pool:
-  vmImage: 'windows-latest'
-
-steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '7.0.x'
-
-- script: dotnet build --configuration Release
-- script: dotnet publish -c Release -o publish
-
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'your-subscription'
-    appName: 'your-app-name'
-    package: 'publish'
-```
+- User input handling  
+- Loops and conditions  
+- Collections (List)  
+- Basic CRUD operations  
 
 ---
 
-## 🔐 Security Considerations
+## 🔹 2. Web Development with ASP.NET Core
 
-* Use Azure Key Vault for secrets
-* Never store connection strings in code
-* Enable HTTPS for App Services
-* Use Managed Identity when possible
+### 📌 Project: Task Manager Web Application (MVC)
 
----
+A full web application built using **ASP.NET Core MVC**.
 
-## 📸 Demo (Optional)
+### ✅ Concepts Covered
 
-* Upload/download files via API
-* Trigger Azure Function endpoint
-* Auto deployment via pipeline
+- MVC Architecture (Model-View-Controller)  
+- Razor syntax for dynamic HTML  
+- Controllers and routing  
+- Dependency Injection  
+- Middleware pipeline  
 
----
-
-## 🎯 Objectives Achieved
-
-✔ Cloud deployment using Azure
-✔ File storage with Blob Storage
-✔ Serverless architecture using Azure Functions
-✔ Automated CI/CD pipeline
-
----
-
-## 👨‍💻 Author
-
-**Islam Fathy**
-Final Year Computer Science Student
-Front-End & .NET Developer
-
----
-
-## 📄 License
-
-This project is for educational purposes (Codveda Internship Task).
+### ⚙️ Features
+... (108 lines left)
